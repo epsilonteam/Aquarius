@@ -1,0 +1,36 @@
+{
+  "required": false,
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7",
+  "package": "net.aquarius.client.mixin.mixins",
+  "refmap": "mixins.aquarius.refmap.json",
+  "client": [
+    "MixinMinecraft",
+    "accessor.AccessorEntity",
+    "accessor.AccessorItemTool",
+    "accessor.AccessorMinecraft",
+    "accessor.AccessorTimer",
+    "accessor.gui.AccessorGuiBossOverlay",
+    "accessor.gui.AccessorGuiChat",
+    "accessor.gui.AccessorGuiDisconnected",
+    "accessor.gui.AccessorGuiEditSign",
+    "accessor.network.AccessorCPacketChatMessage",
+    "accessor.network.AccessorCPacketCloseWindow",
+    "accessor.network.AccessorCPacketPlayer",
+    "accessor.network.AccessorCPacketUseEntity",
+    "accessor.network.AccessorSPacketChat",
+    "accessor.network.AccessorSPacketEntityVelocity",
+    "accessor.network.AccessorSPacketExplosion",
+    "accessor.network.AccessorSPacketPosLook",
+    "accessor.player.AccessorEntityPlayerSP",
+    "accessor.player.AccessorPlayerControllerMP",
+    "accessor.render.AccessorRenderGlobal",
+    "accessor.render.AccessorRenderManager",
+    "accessor.render.AccessorShaderGroup",
+    "network.MixinNetworkManager"
+  ],
+  "mixins": [
+    "render.MixinEntityRenderer",
+    "render.MixinGuiSubtitleOverlay"
+  ]
+}
