@@ -2,7 +2,7 @@
   "required": false,
   "compatibilityLevel": "JAVA_8",
   "minVersion": "0.7",
-  "package": "net.aquarius.client.mixin.mixins",
+  "package": "net.spartanb312.aquarius.mixin.mixins",
   "refmap": "mixins.aquarius.refmap.json",
   "client": [
     "MixinMinecraft",

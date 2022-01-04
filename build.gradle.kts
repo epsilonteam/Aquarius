@@ -33,6 +33,7 @@ apply {
 repositories {
     jcenter()
     mavenCentral()
+    maven("https://impactdevelopment.github.io/maven/")
     maven("https://repo.spongepowered.org/repository/maven-public/")
     maven("https://jitpack.io")
 }
@@ -67,6 +68,9 @@ dependencies {
 
     library("org.joml:joml:1.10.1")
 
+    implementation("com.github.cabaletta:baritone:1.2.14")
+    library("cabaletta:baritone-api:1.2")
+
     annotationProcessor("org.spongepowered:mixin:0.8.2:processor") {
         exclude("gson")
     }
@@ -95,7 +99,7 @@ configure<UserDevExtension> {
                 mapOf(
                     "forge.logging.markers" to "SCAN,REGISTRIES,REGISTRYDUMP",
                     "forge.logging.console.level" to "info",
-                    "fml.coreMods.load" to "net.aquarius.client.launch.FMLCoreMod",
+                    "fml.coreMods.load" to "net.spartanb312.aquarius.launch.FMLCoreMod",
                     "mixin.env.disableRefMap" to "true"
                 )
             )
@@ -123,7 +127,7 @@ tasks {
         manifest {
             attributes(
                 "FMLCorePluginContainsFMLMod" to "true",
-                "FMLCorePlugin" to "net.aquarius.client.launch.FMLCoreMod",
+                "FMLCorePlugin" to "net.spartanb312.aquarius.launch.FMLCoreMod",
                 "MixinConfigs" to "mixins.aquarius.json",
                 "TweakClass" to "org.spongepowered.asm.launch.MixinTweaker",
                 "TweakOrder" to 0,
